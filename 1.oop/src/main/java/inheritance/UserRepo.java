@@ -1,15 +1,14 @@
 package inheritance;
 
-public class UserRepo {
+import polymorphism.Account;
+
+public class UserRepo extends JpaRepo<Account> {
 
     private String name;
 
     UserRepo(String name){
+        super(Account.class);
         this.name = name;
-    }
-
-    public String findAll(){
-        return "SELECT * from users";
     }
 
     public String findByUserName(){

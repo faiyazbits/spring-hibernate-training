@@ -1,9 +1,6 @@
 package polymorphism;
 
-import polymorphism.validator.AccountStateRule;
-import polymorphism.validator.DefaultRule;
-import polymorphism.validator.IValidator;
-import polymorphism.validator.RegisteredRule;
+import polymorphism.validator.*;
 
 import java.util.ArrayList;
 
@@ -14,6 +11,8 @@ public class PolymorphicValidator {
     PolymorphicValidator() {
         this.ruleList.add(new AccountStateRule(State.Blocked));
         this.ruleList.add(new RegisteredRule());
+        this.ruleList.add(new CardStateRule(State.Blocked));
+        this.ruleList.add(new CardStateRule(State.Cancelled));
     }
 
     public ValidationResult validate(Account account) {

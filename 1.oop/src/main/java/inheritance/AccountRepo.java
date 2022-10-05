@@ -1,6 +1,7 @@
 package inheritance;
 
-import org.example.abstraction.Account;
+
+import polymorphism.Account;
 
 public class AccountRepo extends JpaRepo<Account> {
 
