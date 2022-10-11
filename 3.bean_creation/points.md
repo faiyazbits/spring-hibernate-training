@@ -23,3 +23,20 @@
 * when using stereotype spring only created instances . we need to set the properties later on
 
 * we can use registerBean method of the context when we want to implement a custom way of adding beans or when we need to add beans based on condition
+
+## wiring ##
+
+* Spring augments all objects and methods we annotate
+* two ways to establish relationship among beans
+  * link the beans by directly calling the methods that create them (wiring)
+  * enable spring to provide us a value using a method parameter (auto wiring)
+  
+* only one instance is created even though we are calling the bean method multiple times
+* Dependency injection is a technique involving the framework setting a value into specific field or parameter
+* using @Autowired
+* 3 ways of using @Autowired
+  * injecting a value in the field of a class
+  * injecting a value through constructor parameters
+  * injecting value through setter (very rarely used)
+* Dealing with circular dependency
+* Choosing from multiple bean in the spring context using qualifier
